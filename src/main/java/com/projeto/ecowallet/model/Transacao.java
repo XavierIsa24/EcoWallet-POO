@@ -7,6 +7,7 @@ public abstract class Transacao {
     private double valor;
     private LocalDate data;
     private Categoria categoria;
+    private String tipo;
 
     public Transacao(String descricao, double valor, LocalDate data, Categoria categoria){
         this.descricao = descricao;
@@ -27,6 +28,10 @@ public abstract class Transacao {
 
     public Categoria getCategoria(){
         return categoria;
+    }
+
+    public String getTipo(){
+        return tipo;
     }
 
     public abstract double getValorParaSaldo();
