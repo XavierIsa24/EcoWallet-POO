@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10"
+      alignment="CENTER"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.projeto.ecowallet.controller.MainController"
+      stylesheets="@../style/style.css">
+
+    <Label text="EcoWallet"/>
+
+    <Label text="Descrição:" alignment="CENTER_LEFT" maxWidth="Infinity"/>
+    <TextField fx:id="txtDescricao" promptText="Digite a descrição"/>
+
+    <Label text="Valor:" alignment="CENTER_LEFT" maxWidth="Infinity"/>
+    <TextField fx:id="txtValor" promptText="0.00"/>
+
+    <Label text="Data:" alignment="CENTER_LEFT" maxWidth="Infinity"/>
+    <TextField fx:id="txtData" promptText="24/05/2026"/>
+
+    <Label text="Tipo:"/>
+    <ComboBox fx:id="comboTipo" promptText="Selecione"/>
+
+<Label text="Categoria:"/>
+<ComboBox fx:id="comboCategoria" promptText="Selecione"/>
+
+    <Button text="Adicionar" onAction="#adicionarTransacao"/>
+
+    <TableView fx:id = "tabelaTransacoes" prefHeight = "200">
+
+        <columns>
+            <TableColumn fx:id = "colDescricao" text = "Descrição"/>
+            <TableColumn fx:id = "colValor" text = "Valor"/>
+            <TableColumn fx:id = "colData" text = "Data"/>
+            <TableColumn fx:id = "colTipo" text = "Tipo"/>
+            <TableColumn fx:id = "colCategoria" text = "Categoria"/>
+        </columns>
+    </TableView>
+
+    <Label fx:id = "lblSaldo" id = "lblSaldo" text = "Saldo: 0.0"/>
+
+    <Button text= "Remover Selecionada" onAction = "#removerTransacao"/>
+
+
+</VBox>

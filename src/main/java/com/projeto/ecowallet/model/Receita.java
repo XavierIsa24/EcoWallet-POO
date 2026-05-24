@@ -13,5 +13,9 @@ public class Receita extends Transacao {
         return getValor();
     }
 
+    @Override
+    public String getTipo() {
+    return "Entrada";
+    }
 
 }

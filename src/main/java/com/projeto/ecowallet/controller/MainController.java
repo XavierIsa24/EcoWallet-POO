@@ -1,5 +1,6 @@
 package com.projeto.ecowallet.controller;
 import  java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 import com.projeto.ecowallet.factory.TransacaoFactory;
 import com.projeto.ecowallet.model.Categoria;
@@ -79,7 +80,7 @@ public class MainController {
 
         try {
 
-            if(descricao.isEmpty() || valorTexto.isEmpty() || dataTexto.isEmpty() || tipo == null || categoria == null){
+            if(descricao.isEmpty() || valorTexto.isEmpty() || dataTexto.isEmpty()){
                 Alert alert = new Alert(Alert.AlertType.WARNING);
                 alert.setTitle("Aviso");
                 alert.setHeaderText(null);
@@ -90,7 +91,8 @@ public class MainController {
             }
             
             double valor = Double.parseDouble(valorTexto);
-            LocalDate data = LocalDate.parse(dataTexto);
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+            LocalDate data = LocalDate.parse(dataTexto, formatter);
             Transacao transacao = TransacaoFactory.criarTransacao(tipo, descricao, valor, data, categoria);
             gerenciador.adicionarTransacao(transacao);
 

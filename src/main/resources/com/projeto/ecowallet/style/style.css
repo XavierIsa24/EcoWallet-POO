@@ -1,0 +1,38 @@
+.root{
+    -fx-background-color: #f4d6f9;
+    -fx-padding: 20;
+    -fx-font-family: "Arial";
+}
+
+.label {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+
+.text-field,
+.combo-box{
+    -fx-pref-width: 250px;
+    -fx-font-size: 14px;
+}
+
+.button{
+    -fx-background-color: #2e7d32;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+}
+
+.button:hover{
+    -fx-background-color: #1b5e20;
+}
+
+.table-view{
+    -fx-pref-width: 600px;
+}
+
+#lblSaldo{
+    -fx-font-size: 16px;
+    -fx-text-fill: #2e7d32;
+    -fx-font-weight: bold;
+}

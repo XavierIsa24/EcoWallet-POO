@@ -11,4 +11,9 @@ public class Despesa extends Transacao {
     public double getValorParaSaldo(){
         return getValor() * -1;
     }
+
+    @Override
+    public String getTipo() {
+    return "Saída";
+    }
 }

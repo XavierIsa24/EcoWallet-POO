@@ -17,9 +17,9 @@ public class TransacaoFactory {
     
     ){
 
-        if (tipo.equalsIgnoreCase("Receita")){
+        if (tipo.equalsIgnoreCase("Entrada")){
             return new Receita(descricao, valor, data, categoria);
-        } else if (tipo.equalsIgnoreCase("Despesa")) {
+        } else if (tipo.equalsIgnoreCase("Saída")) {
             return new Despesa(descricao, valor, data, categoria);
         } else {
             throw new IllegalArgumentException("Tipo de transação inválida.");
