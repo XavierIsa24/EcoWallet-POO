@@ -7,13 +7,15 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
     @Override
-    public void start(Stage stage) throws Exception{
+    public void start(Stage stage) throws Exception {
         FXMLLoader fxmlLoader = new FXMLLoader(
-    Main.class.getResource("/com/projeto/ecowallet/view/MainView.fxml")
-);
+                Main.class.getResource("/com/projeto/ecowallet/view/MainView.fxml")
+        );
 
         Scene scene = new Scene(fxmlLoader.load());
-        scene.getStylesheets().add(getClass().getResource("/com/projeto/ecowallet/style/style.css").toExternalForm());
+        scene.getStylesheets().add(
+                getClass().getResource("/com/projeto/ecowallet/style/style.css").toExternalForm()
+        );
         stage.setTitle("EcoWallet");
         stage.setScene(scene);
         stage.show();
@@ -22,5 +24,4 @@ public class Main extends Application {
     public static void main(String[] args) {
         launch();
     }
-    
 }
