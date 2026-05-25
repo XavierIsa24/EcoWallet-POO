@@ -1,21 +1,25 @@
 package com.projeto.ecowallet.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.time.LocalDate;
 
 public class Receita extends Transacao {
 
-    public Receita(String descricao, double valor, LocalDate data, Categoria categoria){
-        super(descricao, valor, data, categoria);
+    public Receita() {
+    }
+
+    public Receita(String descricao, double valor, LocalDate data, Categoria categoria) {
+        super(descricao, valor, data, TipoTransacao.RECEITA, categoria);
+    }
+
+    public Receita(String descricao, double valor, LocalDate data,
+                   TipoTransacao tipo, Categoria categoria) {
+        super(descricao, valor, data, TipoTransacao.RECEITA, categoria);
     }
 
     @Override
-    public double getValorParaSaldo(){
+    @JsonIgnore
+    public double getValorParaSaldo() {
         return getValor();
     }
-
-    @Override
-    public String getTipo() {
-    return "Entrada";
-    }
-
 }

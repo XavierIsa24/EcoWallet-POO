@@ -1,10 +1,9 @@
 package com.projeto.ecowallet.model;
 
 public enum Categoria {
-    ALIMENTAÇÃO,
+    ALIMENTACAO,
     TRANSPORTE,
     LAZER,
-    SALÁRIO,
-    OUTROS
-    
+    SALARIO,
+    CONTAS
 }
